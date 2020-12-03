@@ -220,7 +220,7 @@ jobserver_acquire_all (void)
 void
 jobserver_pre_child (int recursive)
 {
-  recursive = true;
+  recursive = 1;
   if (recursive && job_fds[0] >= 0)
     {
       fd_inherit (job_fds[0]);
